@@ -13,10 +13,15 @@ class DeviceEnum(str, Enum):
     smartphone = 'smartphone'
     pc = 'pc'
 
+class SearchEngineEnum(str, Enum):
+    yandex = 'yandex'
+    google = 'google'
+
 class Position(BaseModel):
     key: str
     pos: int
     url: str
     date: datetime
-    city: str
+    region: int
     device: DeviceEnum
+    search_engine: SearchEngineEnum
