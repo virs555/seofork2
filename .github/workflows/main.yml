@@ -9,8 +9,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Install requirements
-        run: pip install -r requirements.txt
-        run: pip install -r requirements-dev.txt
+        run: |
+          pip install -r requirements.txt
+          pip install -r requirements-dev.txt
       - name: Lint Ruff
         run: ruff check .
 
@@ -20,7 +21,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Install requirements
-        run: pip install -r requirements.txt
-        run: pip install -r requirements-dev.txt
+        run: |
+          pip install -r requirements.txt
+          pip install -r requirements-dev.txt
       - name: Check types
         run: mypy .
