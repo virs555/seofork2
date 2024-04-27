@@ -1,3 +1,4 @@
-{
+{   
+    "ruff.interpreter": [".venv/bin/python"],
     "mypy.dmypyExecutable": "${workspaceFolder}/.venv/bin/dmypy",
 }
